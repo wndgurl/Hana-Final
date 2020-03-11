@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Function</title>
+        <meta charset = "utf-8">
+    </head>
+    <body>
+        <h1><u>Function</u></h1>
+        <script>
+            var i = 0;
+
+            function twoThree()
+            {
+                console.log(2);
+                console.log(3);
+            }
+
+            while( i < 5 )
+            {
+                 console.log(i);
+                 twoThree();
+                 i++;
+            }
+
+            function sum(left,right)      // sum → 매게변수(parameter)
+            {                               
+                return left+right;
+            }
+
+            document.write(sum(1,2)+'<br>');                     // 1,2 → 인자(argument)
+            document.write(sum(2,3)+'<br>');
+
+            function minus(left,right)
+            {
+                return left-right;
+            }
+
+            console.log(minus(1,2));
+            console.log(minus(2,5));
+        </script>
+    </body>
+
+</html>

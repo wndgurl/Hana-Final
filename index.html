@@ -1,0 +1,119 @@
+﻿<!doctype html>
+
+<html>
+
+    <head>
+        <title>JH</title>
+        <meta charset="utf-8">
+        <script src=https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <script>
+            function login()
+            {
+                var name = '334dc724dbd0e23d6e6dc93bb173786a8163fb3fb393b39ca43b8e3816264a12';
+                var password = '0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c';
+                var inputname = prompt('Name?');
+                var inputpassword = prompt('Password?');
+                if(name===sha256(inputname))
+                {
+                    if(password===sha256(inputpassword))
+                    {
+                        alert('주인님 기다렸습니다! 열심히 하겠습니다 XD');
+                        const utterance = new SpeechSynthesisUtterance('주인님 기다렸습니다! 열심히 하겠습니다.');
+                        window.speechSynthesis.speak(utterance);
+                    }
+                    else
+                    {
+                        alert('비밀번호가 틀렸습니다. 누구세요?');
+                        document.querySelector('body').className='hinge';
+                        const utterance = new SpeechSynthesisUtterance('써어어억 물렀거랏');
+                           window.speechSynthesis.speak(utterance);
+                    }
+                }
+                else
+                {
+                    alert('저의 주인님이 아닙니다. 경계를 시작합니다! :(');
+                    document.querySelector('body').className='hinge';
+                    const utterance = new SpeechSynthesisUtterance('누구냐 넌');
+                    window.speechSynthesis.speak(utterance);
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="button" value="Login" onclick="login()">
+
+        <h1 class="animated bounceInRight delay-10s"><a href="index.html">JH_INFO :D</a></h1>
+
+        <h2>Welcome to "JH_INFO"!</h2>
+
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JAVA SCRIPT</a></li>
+        </ol>
+
+        <script>
+            var bodyTag = document.querySelector('body');                            // 변수를 도입해서 코딩의 효과를 증대!
+            var as = document.querySelectorAll('a');                                 // 각각의 값들을 배열로 준다.
+            var i = 0;
+            while( i < as.length )
+            {
+                as[i].style.color='black';
+                i++;
+            }
+        </script>
+
+        If you want to change Background Color and Font Color, Click Here →
+
+        <input type="button" value="Night mode" onclick="
+            alert('지금부터 색상을 변경합니다.');
+            var i = 0;
+            if(this.value==='Day mode')
+            {
+                bodyTag.style.backgroundColor = 'white';
+                bodyTag.style.color = 'black';
+                value = 'Night mode';
+
+                while( i < as.length )
+                {
+                   as[i].style.color='black';
+                   i++;
+                }
+            }
+            else
+            {
+                bodyTag.style.backgroundColor = 'black';
+                bodyTag.style.color = 'white';
+                value = 'Day mode';
+
+                while( i < as.length )
+                {
+                    as[i].style.color='white';
+                    i++;
+                }
+            }
+            alert('색상 변경이 끝났습니다.');
+        ">
+
+        <br>
+
+        If you wnat to go to <b>"Google" </b> Click on the <u>any picture</u> :)
+
+        <br>
+        <br>
+        <br>
+
+        <a href="https://www.google.co.kr">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HoXrZsXyYMw" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="https://source.unsplash.com/featured/?nature" alt="Go to Google!" width="400" height="315" border="0" >
+            <img src="https://source.unsplash.com/featured/?puppy"  alt="Go to Google!" width="400" height="315" border="0" >
+            <br>
+            <img src="https://source.unsplash.com/featured/?happy"  alt="Go to Google!" width="800" height="315" border="0" >
+            <img src="https://source.unsplash.com/featured/?travel" alt="Go to Google!" width="565" height="315" border="0" >
+        </a>
+    </body>
+
+</html>

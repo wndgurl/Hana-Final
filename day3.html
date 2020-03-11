@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <title>WEB-CSS</title>
+        <meta charset = "utf-8">
+    </head>
+    <body>
+        <header>
+            <h1><a href="index.html">WEB</a></h1>
+        </header>
+
+        <nav>
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JAVA SCRIPT</a></li>
+            </ol>
+        </nav>
+
+        <aticle>
+            <!--
+                1. 버튼을 어디다 두지?
+                2. 버튼을 어떻게 만들지?
+                3. 버튼을 클릭했을 때 js가 실행되게 어떻게 하지?
+                4. body 태그를 어떻게 js로 선택하지?
+                5. 선택한 body 태그에 style을 어떻게 바꾸지?
+                6. background-color, color를 어떻게 넣지?
+            -->
+
+            <style>
+                h1{font-size:35px;}
+                a{color:orange;}
+            </style>
+
+            <script>
+                var bodyTag = document.querySelector('body');
+                var as = document.querySelectorAll('a');
+                //각각의 값들을 배열로 준다.
+                var i = 0;
+                while( i < as.length )
+                {
+                as[i].style.color='black';
+                i++;
+                }
+            </script>
+
+            <!-- <input type="button" value="Night" onclick="
+                alert('지금부터 색상을 변경합니다.');
+                bodyTag.style.backgroundColor = 'black';
+                bodyTag.style.color = 'white';
+                alert('색상 변경이 끝났습니다.');
+            ">
+
+            <input type="button" value="Day" onclick="
+                alert('지금부터 색상을 변경합니다.');
+                bodyTag.style.backgroundColor = 'white';
+                bodyTag.style.color = 'black';
+                alert('색상 변경이 끝났습니다.');
+            "> -->
+
+            <input type="button" value="Night mode" onclick="
+                alert('지금부터 색상을 변경합니다.');
+                var i = 0;
+                if(this.value==='Day mode')
+                {
+                    bodyTag.style.backgroundColor = 'white';
+                    bodyTag.style.color = 'black';
+                    value = 'Night mode';
+                     
+                    while( i < as.length )
+                    {
+                       as[i].style.color='black';
+                       i++;
+                    }
+                }
+                else
+                {
+                    bodyTag.style.backgroundColor = 'black';
+                    bodyTag.style.color = 'white';
+                    value = 'Day mode';
+                     
+                    while( i < as.length )
+                    {
+                        as[i].style.color='white';
+                        i++;
+                    }
+                }
+                alert('색상 변경이 끝났습니다.');
+            ">
+
+            <br>
+
+            <h2>HTML</h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa magni sapiente voluptatem repellat. Reiciendis aspernatur accusantium impedit cum iste unde, omnis necessitatibus, voluptatibus, facilis dignissimos qui sunt ea tempore voluptatum assumenda. Accusantium repellat, praesentium odit repudiandae aperiam, culpa placeat suscipit nulla asperiores deleniti ipsum dolorum sapiente. Cumque quam voluptas rerum iure atque dignissimos distinctio ea corrupti, reiciendis veniam molestias mollitia tempora, debitis qui cum, placeat provident porro vel inventore blanditiis iusto. Magni, totam quis facere mollitia neque consequatur molestias fugit doloribus reprehenderit, distinctio quaerat obcaecati itaque, placeat ea in quibusdam eius ipsam quas voluptatem. Quasi optio earum possimus omnis obcaecati.
+
+            <h2>CSS</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolores ratione iste quod consequuntur. Minus nisi temporibus distinctio adipisci voluptate est numquam accusamus, commodi nesciunt asperiores illo earum doloremque. Qui distinctio non, accusantium ab obcaecati enim cupiditate quo deserunt facilis praesentium ipsum incidunt temporibus neque perspiciatis autem eaque repellat ea. Nihil itaque voluptatem est ea quia officiis vitae praesentium eum tempore atque at culpa modi, eius ad nesciunt natus temporibus corporis dignissimos eos! Illo non modi ad libero animi asperiores, voluptates, rerum sequi dolorem voluptatibus natus dicta accusantium unde provident laboriosam similique ab veniam consequuntur dolore optio reprehenderit ipsam esse perferendis! Dolorem similique adipisci veniam expedita doloribus hic molestiae quo recusandae. Ullam consequatur animi libero saepe rem dignissimos eveniet consectetur!
+
+            <h2>JS(JAVA SCRIPT)</h2>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet sit ad numquam recusandae? Ut dolores placeat vero quibusdam explicabo a blanditiis dignissimos fugiat quod illo harum aperiam provident, porro ipsam eveniet necessitatibus libero, magni voluptas numquam impedit quisquam voluptatem totam voluptates error! Cumque laborum nemo hic, aperiam harum ipsa quaerat sapiente reiciendis corrupti odio quo voluptatum fugiat quis alias ipsam eaque! Eaque repellendus officiis assumenda. In possimus nobis est nostrum, sit fugit, consequatur consequuntur veniam quos fugiat, nulla cupiditate praesentium sequi facilis quisquam ipsa vero recusandae eos tenetur harum natus aperiam modi! Maiores labore impedit necessitatibus consectetur? Repellat unde nihil, ratione, libero, autem adipisci molestiae vitae est tempora magnam dolores.
+
+        </aticle>
+    </body>
+</html>
