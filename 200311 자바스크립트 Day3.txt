@@ -1,0 +1,148 @@
+
+   < 웹/자바스크립트 - DAY 3 >
+ 
+
+  [ HTML 과 CSS ]
+
+  1. CSS는 디자인을 담당한다.
+
+  2. HTML이 정보와 디자인을 둘 다 담당했었으나.
+     CSS의 도입으로 HTML은 정보에 전념하고 디자인은 CSS에게 분담시키게 되었다. → HTML에선 정보가 정말 중요하다!
+
+
+  [ CSS 를 본문에 포함시키는 방법 2가지 ]
+
+  1. <style> 태그
+  - <style>_________________</style> → 스타일 태그가 끝날 때까지 CSS가 올거야
+  - ex. <style> 
+	h1{
+	     font-size:100px; 
+	}
+         </style>                      → 해당 html에서 <h1>에 해당하는 부분의 폰트 크기를 다 100px로 해라.
+                                              예제에서 h1 과 같은 것이 "선택자(Selector)" 이다.
+                                                          h1 안에 본문에 해당하는 것이 "effect" 이다.
+                                          → 선택자(Selector) : 타겟팅을 하는 것. 선택자를 잘 할 수록 정확하게 타겟팅.
+                                          → 효과(Effect) :  효과를 잘 활용할 수록 보다 효과적으로 HTML을 구현 가능.
+
+  2. 인라인방식
+  - 직접 태그 안에 CSS를 포함시키는 방법.
+
+
+  [ header / nav / article ]  : 의미론적 태그(Semantic tag)
+
+  - html의 본문에서 사용되는 태그로, 전산이(컴퓨터가) 본문 상에서 타이틀과 본문 등을 구분할 수 있도록 해주는 태그.
+
+
+  [ id 속성 ]
+
+
+  [ 반복문 Family ]
+
+  1. Boolean
+  2. 비교연산자
+  3. 배열
+  4. 반복문
+
+
+  [ 배열 array ]
+
+  - index(색인) 은 0부터 시작한다.
+  - element 는 index와 그 내용을 포함해서 모두 이르는 말.
+  - ex. <script>
+	var member = ['최중혁','최헌기','이병이']  //  배열을 생성하며 동시에 값도 넣은 것
+	document.write(member[0]+'<br>');        //  member 란 배열에서 [0] index 값 출력
+	document.write(member[1].length);         //  member 란 배열에서 [1] index의 길이값 출력
+             member.push('김유진');                         //  배열에 추가하기
+         </script>
+  - 
+
+  Cf. CRUD = Create / Read / Update / Delete ( 생성 / 읽기 / 수정 / 삭제)
+
+  
+  [ 반복문 + 배열 ] 
+
+  - ex. <script>
+            i = 0;
+            while(i < member.length)                                      // good coading! ★★★★★
+            {
+                document.write('<li>'+member[i]+'</li>');             // 리펙토링 한 것!
+                i++
+            }
+        </script>
+
+
+  [ 반복문 + 배열 응용 ]	
+
+  - 해당 웹페이지의 링크들의 Font Color를 Orange 로 바꿔라. (배열과 반복문을 사용해서)
+  - ex. <script>
+	var as = document.querySelectorAll('a');                   // 'a' 에 해당하는 모든 것들을 변수 as로 지정한다. → 배열로 저장됨. as[i]
+	var i   = o;
+	while( i < as.length )
+	{
+	      as[i].style.color='orange';
+	      i++;
+	}
+         </script>
+
+
+  [ API : Application Programming Interface ]
+
+  - API : 응용 프로그램에서 사용할 수 있도록, 운영 체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스
+           프로그램과 또 다른 프로그램을 연결해주는 일종의 다리
+           내가 만든 서비스가 개인개발자/기업/기관이 제공하는 기능, 프로그램을 사용할 수 있도록 도와주는 중간 매개체
+  - Interface : '접점' , '표면'
+  - UI (User Interface) : 사용자가 그 프로그램을 사용하기 위한 조작장치들
+  - 사용자를 "END USER" 라고 부르기도 함. → 제일 끝단에 있다고 해서.
+  - UI 뒤에는 여러 API 들이 있다.
+
+
+ [ 함수 ]
+
+  - 함수에서 return 을 만나면 그 값이 함수의 값이 되고, 거기서 해당 함수는 종료가 된다.
+  - ex. function sum(left, right)
+         {
+	console.log('before return');
+	return left+right;
+	console.log('after return');
+         }
+         sum(1,2); //3
+         sum(2,3); //5
+  - 함수를 활용해 코딩을 좀 더 효율적으로, 가독성 높게 할 수 있다. (불필요한 반복 ↓)
+
+
+
+  [ 객체 object ] 
+
+  - 서로 연관된 변수와 함수를 모아서 이름을 붙인 것.
+  - 목적 : 정리정돈
+
+
+
+
+
+
+
+  [ 암호화 ]
+
+  - ex. egoing → SHA256 → a59b62a99fbd7ef95764938d84da1dda982c47ce6472190f914619a81ebb8e7b
+        ---------   ---------    ----------------------------------------------------------------------------------
+          평문                                                                 암호문
+       plain text                                                            cipher text
+
+  - Encrition(암호화) = 'plain text' → 'cipher text' 로 변환하는 과정
+  - Decription(복호화) = 'cipher text' → 'plain text' 로 변환하는 과정
+
+  - 암호문 종류
+    (1) 암호화 O & 복호화 O : 양방향 암호화
+    (2) 암호화 O & 복호화 X : 단방향 암호화 = 'Hash' (영문상 의미 : 다진고기)
+
+  - 단방향 암호화에는 키가 필요가 없다.
+    반면, 양방향 암호화에는 키가 필요하다. 키를 활용해서 암호화하고 반대로 키를 활용해서 복호화한다.
+    그러므로 양방향 암호화에서 핵심은 키! 
+
+
+  [ JS 사용법 4 ]
+
+  - <script src> 와 주소를 활용해서 JS 사용.
+  - ex. <script src = "https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
+         sha256('1111')

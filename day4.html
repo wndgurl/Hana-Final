@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+    <head>
+        <title> DAY 4 </title>
+        <meta charset = "utf-8">
+        <script>
+            function hello()
+            {
+                alert("Hello Stranger!");
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <!--유저로부터 값을 입력받는 태그라서 Input-->
+        <!--input은 부모 태그가 있는데, 그게 form 태그-->
+        <!--    -->
+
+        <form action="https://www.google.com/search">
+            <input type="text" name="q" value="">         <!--text 창에 입력받은 어떤 값은 title이 되는 것-->
+            <input type="submit" value="GOOGLE">
+        </form>
+
+        <form action="https://search.naver.com/search.naver">
+            <input type="text" name="query" value="">         <!--text 창에 입력받은 어떤 값은 title이 되는 것-->
+            <input type="submit" value="NAVER">
+        </form>
+        <br>
+
+        <!-- URL을 만들어주는 코드 ex.day4.html?title=아자차카타파하 (고객으로부터 제출 받은 값이 '아자차카타파하'일 때) -->
+        <!--
+            action = URL로 연결을 해주는 속성
+            name   =
+            submit = 실행을 해주는 속성
+        -->
+
+        <a href = "index.html"><h1> WEB </h1></a>
+
+        <h2> Hi </h2>
+
+        <input type="button" value="Click Me" onclick="hello()">
+        <input type="button" value="Click Me" onclick="hello()">
+        <input type="button" value="Click Me" onclick="hello()">
+        <input type="button" value="Click Me" onclick="hello()">
+        <input type="button" value="Click Me" onclick="hello()">
+
+        <ol>
+            <a href="1.html"><li>HTML</li></a>
+            <a href="1.html"><li>CSS</li></a>
+            <a href="1.html"><li>JS</li></a>
+        </ol>
+
+        <div>Teachable Machine Image Model</div>
+        <button type="button" onclick="init()">Start</button>
+        <div id="webcam-container"></div>
+        <div id="label-container"></div>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script type="text/javascript">
+            // More API functions here:
+            // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+        
+            // the link to your model provided by Teachable Machine export panel
+            const URL = "./my_model/";
+        
+            let model, webcam, labelContainer, maxPredictions;
+        
+            // Load the image model and setup the webcam
+            async function init() {
+                const modelURL = URL + "model.json";
+                const metadataURL = URL + "metadata.json";
+            
+                // load the model and metadata
+                // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+                // or files from your local hard drive
+                // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+            
+                // Convenience function to setup a webcam
+                const flip = true; // whether to flip the webcam
+                webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+                await webcam.setup(); // request access to the webcam
+                await webcam.play();
+                window.requestAnimationFrame(loop);
+            
+                // append elements to the DOM
+                document.getElementById("webcam-container").appendChild(webcam.canvas);
+                labelContainer = document.getElementById("label-container");
+                for (let i = 0; i < maxPredictions; i++) { // and class labels
+                    labelContainer.appendChild(document.createElement("div"));
+                }
+            }
+        
+            async function loop() {
+                webcam.update(); // update the webcam frame
+                await predict();
+                window.requestAnimationFrame(loop);
+            }
+        
+            // run the webcam image through the image model
+            async function predict() {
+                // predict can take in an image, video or canvas html element
+                const prediction = await model.predict(webcam.canvas);
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction =
+                        prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                }
+            }
+        </script>
+
+        <h2> JS </h2>
+
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptas dolor debitis exercitationem ex doloremque quo deserunt, repellat reiciendis aliquid obcaecati alias quam consectetur, illo dolore. Dicta quam corrupti nihil? Architecto dicta tempora eveniet, exercitationem veniam ad nesciunt blanditiis quod nisi mollitia quas ratione deserunt dolore natus officiis quae iusto cupiditate itaque quasi eligendi rerum nulla dolor sequi asperiores? Ducimus veniam tempore aperiam dolorem officia. Soluta ipsum in, magnam placeat assumenda officia cumque recusandae doloremque. Possimus fugiat unde, consequatur delectus enim dolor, voluptas provident cumque officiis iure vitae mollitia nobis facere maiores! Nam laborum earum molestiae aliquam assumenda cum quo.
+
+    </body>
+</html>

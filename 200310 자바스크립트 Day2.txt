@@ -1,0 +1,115 @@
+
+ < 웹/자바스크립트 - DAY 2 >
+
+
+ [ DAY 1 복습 ]
+
+ * lorem : 의미없는 무작위 단어 나열 (ex. lorem100 + TAB)
+
+ * UTF-8 : 인코딩 방법 중에 하나.
+   [참고] 인코딩(encoding) : 코드화 한다. ( 가 → 010010010 )
+           디코딩(decoding) : 코드를 푼다. ( 010010010 → 가 )
+
+ * <meta charset = "UTF-8"> 이 웹페이지는 UTF-8 방법으로 인코딩되었기 때문에 해당 방법으로 디코딩해라.
+
+ * <!doctype html> 이 문서는 html 구조로 만들어진 문서이다.
+
+ * <a href = "index.html"></a> 링크걸기
+   [참고] href = Hypertext REFenrence
+
+* alt 단축키 활용해서 다중선택 후 한번에 수정이 가능하다.
+
+
+ [ 자바스크립트 실행방법 3가지 ]
+
+ 1. 개발자도구의 Console 사용 : " 마우스 오른쪽 버튼 - [검사]" = " Ctrl + Shift + i "
+ 2. 스크립트 태그를 사용
+ 3. 이벤트 
+
+- alert('Hello World!') : 경고창을 띄우기
+
+- prompt('password?') : 사용자로부터 입력받기
+- comfirm('진짜?') : 확인받기 → 사용자가 확인 선택시, true / 취소 선택시, false
+→ 이와같이 사용자와 상호작용하는 기능을 웹브라우져는 가지고 있다!
+
+- Math.random() : 랜덤한 실수 값 출력 (0~1)
+- Math.random()*10 : 랜덤한 실수 값 출력 (0~9)
+- Math.floor(Math.random()*10) : 랜덤한 정수 값 출력 (0~10) → 내림 기능 활용
+
+- alert(1);
+  alert(2);
+  alert(3); → 연속적인 실행이 가능
+
+
+[ HTML에서 JS를 필수로 요구하는 태그 ]
+
+태그 : <script>______JS_______</script>
+
+
+[이벤트]
+
+이벤트 : onclick → ex. <input type="botton" value="click me" onclick="alert('Hi !')">
+           onchange →  ex. <input type="text" onchange="alert('changed')">
+           .
+           .
+           .
+이벤트는 어떤 사건들을 의미한다. 그리고 유한하다. 약 10가지 정도. 
+이벤트의 속성 값으로는 반드시 JS가 온다.
+해당 JS는 이벤트가 발생했을 때 실행하도록 약속되어 있다.
+이벤트의 종류에 따라 사용할 수 있는 JS가 다르다.
+** event programming
+
+
+[ 스타일 속성 ]
+
+ex. <ol style = "background-color:black;">
+스타일이란 속성의 값으로는 CSS가 들어간다.
+
+
+
+html은 정보다. ★★★★★★
+css는 디자인이다.
+js는 사용자와 상호작용이다.
+
+document.querySelector('body').style.backgroundColor='powderblue' → 백그라운드 색깔 변경
+document.querySelector('body').style.color='red' → 폰트 색깔 변경
+
+js는 정적인 애플리케이션을 동적으로 만들어준다!
+
+
+[ 변수 ] 변수란, 데이터에 이름을 붙이는 것
+
+[ 함수 ] 함수란, 처리 방법에 이름을 붙이는 것
+
+[ refactoring ] 기능은 그대로 두고, 코드를 개선하는 것
+                   중복이 있으면 리펙토링의 여지가 있다.
+
+[변수의 폭발적 효과]
+1. 유지보수의 편의성
+2. 가독성이 높아짐
+3. 재사용성이 높아짐
+4. 중복의 제거 (★★★★★★★★) :  많은 테크닉들이 중복제거를 위해 존재하고 있다! 그만큼 중요하다! 
+
+
+
+
+
+
+
+[ Boolean (DATA TYPE) ]
+- 2개의 값으로 이루어져있다.
+- TRUE / FALSE
+- "비교연산자" 가 Boolean 타입의 유일한 연산자이다.
+- "비교연산자" : == , != , < , > , <= , >=
+
+Cf. 이항연산자 : 좌항의 값과 우항의 값을 결합해서 하나의 값으로 만드는 연산자
+    (ex. + , - , / , * )
+
+
+[ 조건문 ] 조건문 / 비교연산자 / boolean
+
+[ 반복문 ] 반복문 / 비교연산자 / boolean
+
+[ Debugger ] Debugger를 이용해서 한줄씩 실행 결과를 볼 수 있다.
+
+[ GitHub ] 전세계 오픈소스들이 깃허브를 통해서 공유되고 있다. ★★★★★★★★

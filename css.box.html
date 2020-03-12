@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>CSS_BOX</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+        <style>
+            *{
+                /* border : 5px solid red; */
+            }
+
+            h1
+            {
+                font-family: 'Anton', sans-serif;
+                border:5px solid BLUE;
+                padding:30px;
+                /* padding-top:3px; */
+                /* h1의 display default 값은 100% 이다. */
+            }
+
+            a
+            {
+                display:inline;                    /* a의 display default 값은 inline 이다 */
+            }
+        </style>
+        <script>
+            function randomGenerator()
+            {
+                Math.floor(Math.random()*3);
+            }
+        </script>
+    </head>
+    <body onclick="
+        var colors = ['red', 'blue', 'green']
+        this.style.backgroundColor = colors[randomGenerator()];
+        this.style.color = colors[randomGenerator()];
+    ">
+        <h1>BOX</h1>
+        <h1>BOX</h1>
+
+        <br>
+        <br>
+
+        Lorem <a href="https://naver.com">ipsum</a> dolor sit amet consectetur adipisicing elit. Reprehenderit esse optio dolor. Minima aut deleniti laudantium, culpa in harum quis nam quasi aspernatur sint ullam excepturi iste dicta earum, voluptas officia deserunt quidem quae dolor odio accusamus non voluptate consectetur. Quas at magni voluptatum iusto hic impedit facilis minus ullam dolore praesentium voluptates deserunt alias dolorem vitae omnis, porro molestiae ea magnam commodi neque velit itaque ipsam sint doloribus. Dignissimos obcaecati veritatis tenetur dolores ratione. Ipsam dolorum magni ratione qui distinctio animi incidunt quo nobis nam dolores! Earum iure deleniti delectus, eius reiciendis id, expedita eaque est, voluptate saepe magnam.
+    </body>
+</html>

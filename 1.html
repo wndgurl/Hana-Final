@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 
 <html>
 
@@ -53,15 +53,15 @@
                 }
             }
 
-            function mode(self)
+            function mode()
             {
                 alert('지금부터 색상을 변경합니다.');
                 var i = 0;
-                if(self.value==='Day mode')
+                if(this.value==='Day mode')
                 {
                     bodyTag.style.backgroundColor = 'white';
                     bodyTag.style.color = 'black';
-                    self.value = 'Night mode';
+                    value = 'Night mode';
 
                     while( i < as.length )
                     {
@@ -73,7 +73,7 @@
                 {
                     bodyTag.style.backgroundColor = 'black';
                     bodyTag.style.color = 'white';
-                    self.value = 'Day mode';
+                    value = 'Day mode';
 
                     while( i < as.length )
                     {
@@ -93,6 +93,12 @@
             #all{
                 display:grid;
                 grid-template-columns:300px 1fr;
+                }
+            div.pa {
+                   margin-right: 265px;
+                   }
+            p.z {
+                text-align: justify;
                 }
         </style>
     </head>
@@ -127,38 +133,36 @@
         </script>
     </div>
     <div id="right">
-        <div style="height:80px;"></div>   
+        <div style="height:50px;"></div>   
 
-        If you want to change Background Color and Font Color, Click Here →
-        <input type="button" value="Night mode" onclick="mode(this)">
+        <script>
+            var as = document.querySelectorAll('a');                                 // 각각의 값들을 배열로 준다.
+            var i = 0;
+            while( i < as.length )
+            {
+                as[i].style.color='black';
+                i++;
+            }
+        </script>
 
-        <br>
-        <div style="height:6px;"></div>                                               <!--줄간격 미세조정-->
+        <div class="pa">
 
-        If you wnat to go to <b>"Google" </b> Click on the <u>any picture</u> :)
+        <h2>HTML?</h2>
 
-        <br>
-        <div style="height:10px;"></div>                                              <!--줄간격 미세조정-->
-
-        If you want to search for something, Use this Box →
-        <form action="https://www.google.com/search" style="display:inline">
-            <input type="hidden" name="as_sitesearch" value="opentutorials.org">      <!--특정 사이트에서 검색되도록 조건을 넣는 것-->
-            <input type="text"   name="q">
-            <input type="submit" value="Google">
-        </form>
-
-        <br>
+        <p class="z">
+        Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It canbe assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+        Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages.HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
         <br>
         <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/HoXrZsXyYMw" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="https://www.google.co.kr/search?q=couple">
-            <img src="https://source.unsplash.com/featured/?couple" alt="Go to Google!" width="450" height="315" border="0" ></a>
-            <br>
-            <a href="https://www.google.co.kr/search?q=puppy">
-            <img src="https://source.unsplash.com/featured/?puppy"  alt="Go to Google!" width="350" height="315" border="0" ></a>
-            <a href="https://www.google.co.kr/search?q=travel">
-            <img src="https://source.unsplash.com/featured/?travel" alt="Go to Google!" width="660" height="315" border="0" ></a>
+        HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive formsmay be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semanticsfor text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written usingangle brackets. Tags such as and directly introduce content into the page. Other tags such as surround andprovide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, butuse them to interpret the content of the page.
+        <br>
+        <br>
+        HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages.Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML andcurrent maintainer of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.
+        </p>
+        </div>
+
+        <br>
+        <img src="https://source.unsplash.com/featured/?rain" alt="Go to Google!" width="930" height="500" border="0" >
     </div>
     </div>
     </body>

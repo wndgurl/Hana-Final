@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 
 <html>
 
@@ -53,15 +53,15 @@
                 }
             }
 
-            function mode(self)
+            function mode()
             {
                 alert('지금부터 색상을 변경합니다.');
                 var i = 0;
-                if(self.value==='Day mode')
+                if(this.value==='Day mode')
                 {
                     bodyTag.style.backgroundColor = 'white';
                     bodyTag.style.color = 'black';
-                    self.value = 'Night mode';
+                    value = 'Night mode';
 
                     while( i < as.length )
                     {
@@ -73,7 +73,7 @@
                 {
                     bodyTag.style.backgroundColor = 'black';
                     bodyTag.style.color = 'white';
-                    self.value = 'Day mode';
+                    value = 'Day mode';
 
                     while( i < as.length )
                     {
@@ -93,6 +93,12 @@
             #all{
                 display:grid;
                 grid-template-columns:300px 1fr;
+                }
+            div.pa {
+                   margin-right: 265px;
+                   }
+            p.z {
+                text-align: justify;
                 }
         </style>
     </head>
@@ -127,40 +133,47 @@
         </script>
     </div>
     <div id="right">
-        <div style="height:80px;"></div>   
+        <div style="height:50px;"></div>   
 
-        If you want to change Background Color and Font Color, Click Here →
-        <input type="button" value="Night mode" onclick="mode(this)">
+        <script>
+            var as = document.querySelectorAll('a');                                 // 각각의 값들을 배열로 준다.
+            var i = 0;
+            while( i < as.length )
+            {
+                as[i].style.color='black';
+                i++;
+            }
+        </script>
 
-        <br>
-        <div style="height:6px;"></div>                                               <!--줄간격 미세조정-->
-
-        If you wnat to go to <b>"Google" </b> Click on the <u>any picture</u> :)
-
-        <br>
-        <div style="height:10px;"></div>                                              <!--줄간격 미세조정-->
-
-        If you want to search for something, Use this Box →
-        <form action="https://www.google.com/search" style="display:inline">
-            <input type="hidden" name="as_sitesearch" value="opentutorials.org">      <!--특정 사이트에서 검색되도록 조건을 넣는 것-->
-            <input type="text"   name="q">
-            <input type="submit" value="Google">
-        </form>
-
+        <div class="pa">
+            
+        <h2>JAVA SCRIPT?</h2>
+            
+        <p class="z">
+        JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
         <br>
         <br>
+        Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it for client-side page behavior, and all major web browsers have a dedicated JavaScript engine to execute it.
         <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/HoXrZsXyYMw" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="https://www.google.co.kr/search?q=couple">
-            <img src="https://source.unsplash.com/featured/?couple" alt="Go to Google!" width="450" height="315" border="0" ></a>
-            <br>
-            <a href="https://www.google.co.kr/search?q=puppy">
-            <img src="https://source.unsplash.com/featured/?puppy"  alt="Go to Google!" width="350" height="315" border="0" ></a>
-            <a href="https://www.google.co.kr/search?q=travel">
-            <img src="https://source.unsplash.com/featured/?travel" alt="Go to Google!" width="660" height="315" border="0" ></a>
-    </div>
-    </div>
+        <br>
+        As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). However, the language itself does not include any input/output (I/O), such as networking, storage, or graphics facilities, as the host environment (usually a web browser) provides those APIs.
+        <br>
+        <br>
+        Originally used only in web browsers, JavaScript engines are also now embedded in server-side website deployments and non-browser applications.
+        <br>
+        <br>
+        Although there are similarities between JavaScript and Java, including language name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
+        </p>
+        </div>
+
+        <br>
+        <img src="https://source.unsplash.com/featured/?cloud" alt="Go to Google!" width="930" height="500" border="0" >
+        </div>
+        </div>
     </body>
 
 </html>
+
+
+
+
